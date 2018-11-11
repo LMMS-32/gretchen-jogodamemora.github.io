@@ -1,0 +1,83 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+ background: url("imagens/thumb2.jpeg"); 
+ background-repeat: no-repeat;
+ background-size: 100%;
+}
+#titulo {
+  
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 30px;
+
+}
+.container {
+  max-width: 600px;
+  height: 200px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+}
+.flex-item-1 {
+  flex: 1;
+}
+.item {
+  margin: 5px;
+  text-align: center;
+  font-size: 14px;
+  background-image: url("imagens/verso.jpg");
+  background-size: 100%;
+}
+.flex {
+  display: flex;
+}
+
+.card{
+  position: flex;
+  border-radius: 8px;
+  perspective: 450px;
+  
+}
+.face {
+  position: flex;
+  border-radius: 8px;
+  transition: all 1s; 
+  backface-visibility: hidden;
+}
+
+.card:hover{
+  box-shadow: 0 0 10px #aaa;
+}
+
+.back.virado{
+  transform: rotateY(180deg);
+}
+.front{
+
+  transform: rotateY(-180deg);
+}
+.front.virado{
+  transform: rotateY(0deg);
+}
+
+.memory-card {
+
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
